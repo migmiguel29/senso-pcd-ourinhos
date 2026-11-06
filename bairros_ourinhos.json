@@ -1,0 +1,1501 @@
+{
+  "fonte": "Projeto_dengue/dados/dataset_geo.csv — mediana de pelo menos três coordenadas distintas classificadas como ALTA ou MUITO_ALTA e localizadas em Ourinhos; valores arredondados a 0,001 grau; pontos de referência aproximados.",
+  "bairros": {
+    "agua do jacu": [
+      -23.001,
+      -49.866
+    ],
+    "aguas do eloi": [
+      -22.977,
+      -49.907
+    ],
+    "aguas do eloy": [
+      -22.979,
+      -49.907
+    ],
+    "anchieta": [
+      -22.958,
+      -49.86
+    ],
+    "bandeirantes": [
+      -22.987,
+      -49.885
+    ],
+    "barra funda": [
+      -22.972,
+      -49.873
+    ],
+    "boa esperana": [
+      -22.979,
+      -49.857
+    ],
+    "boa esperana 2 seo": [
+      -22.979,
+      -49.853
+    ],
+    "boa esperanca": [
+      -22.979,
+      -49.856
+    ],
+    "brilhante": [
+      -22.962,
+      -49.896
+    ],
+    "brizola": [
+      -22.957,
+      -49.852
+    ],
+    "caiua": [
+      -22.958,
+      -49.864
+    ],
+    "california": [
+      -22.964,
+      -49.865
+    ],
+    "cdhu vila brasil": [
+      -22.957,
+      -49.864
+    ],
+    "cdhu vl brasil": [
+      -22.959,
+      -49.864
+    ],
+    "centro": [
+      -22.979,
+      -49.868
+    ],
+    "cezira sandano": [
+      -22.959,
+      -49.865
+    ],
+    "chacara bom retiro": [
+      -22.951,
+      -49.876
+    ],
+    "chacara santa lucia": [
+      -22.983,
+      -49.912
+    ],
+    "choso misato": [
+      -22.989,
+      -49.886
+    ],
+    "christoni": [
+      -22.972,
+      -49.871
+    ],
+    "cizira sandano": [
+      -22.96,
+      -49.866
+    ],
+    "cizira sandano migliari": [
+      -22.96,
+      -49.866
+    ],
+    "cj hab caiua": [
+      -22.961,
+      -49.864
+    ],
+    "cj helena b vendramini": [
+      -22.954,
+      -49.858
+    ],
+    "cj helena braz": [
+      -22.954,
+      -49.857
+    ],
+    "cj helena braz vendramini": [
+      -22.955,
+      -49.856
+    ],
+    "cj orlando quagliato": [
+      -22.961,
+      -49.85
+    ],
+    "cj osvaldo brizola": [
+      -22.955,
+      -49.859
+    ],
+    "cj vendramini": [
+      -22.953,
+      -49.856
+    ],
+    "colorado": [
+      -22.958,
+      -49.875
+    ],
+    "condominio moradas": [
+      -23.005,
+      -49.888
+    ],
+    "conj hab helena braz vendramini": [
+      -22.957,
+      -49.857
+    ],
+    "conj hab orlando quagliato": [
+      -22.961,
+      -49.85
+    ],
+    "conj hab osvaldo brizola": [
+      -22.958,
+      -49.853
+    ],
+    "conj padre e murante": [
+      -22.998,
+      -49.884
+    ],
+    "conj. helena braz vendramini": [
+      -22.955,
+      -49.857
+    ],
+    "conjunto caiua": [
+      -22.961,
+      -49.865
+    ],
+    "conjunto habitacional helena braz vendramini": [
+      -22.955,
+      -49.856
+    ],
+    "conjunto habitacional orlando quagliato": [
+      -22.961,
+      -49.85
+    ],
+    "conjunto habitacional ourinhos caiua": [
+      -22.96,
+      -49.864
+    ],
+    "conjunto habitacional ourinhos h": [
+      -22.982,
+      -49.845
+    ],
+    "conjunto habitacional ourinhos i": [
+      -22.981,
+      -49.846
+    ],
+    "conjunto residencial": [
+      -22.999,
+      -49.884
+    ],
+    "conjunto residencial cizira sandano migliari": [
+      -22.959,
+      -49.865
+    ],
+    "conjunto residencial flamboyant": [
+      -22.963,
+      -49.862
+    ],
+    "conjunto residencial itajubi": [
+      -22.961,
+      -49.873
+    ],
+    "conjunto residencial padre eduardo murante": [
+      -22.995,
+      -49.885
+    ],
+    "constante 1": [
+      -22.983,
+      -49.867
+    ],
+    "constante i": [
+      -22.971,
+      -49.867
+    ],
+    "distrito industrial": [
+      -22.956,
+      -49.88
+    ],
+    "domingos garcia": [
+      -22.993,
+      -49.877
+    ],
+    "ecoville": [
+      -23.017,
+      -49.885
+    ],
+    "eldorado": [
+      -22.965,
+      -49.855
+    ],
+    "esmeralda": [
+      -22.962,
+      -49.894
+    ],
+    "estoril": [
+      -22.991,
+      -49.861
+    ],
+    "europa": [
+      -22.967,
+      -49.859
+    ],
+    "flamboyant": [
+      -22.963,
+      -49.862
+    ],
+    "florida": [
+      -22.967,
+      -49.872
+    ],
+    "framboyant": [
+      -22.964,
+      -49.862
+    ],
+    "guapore": [
+      -22.945,
+      -49.886
+    ],
+    "h b vendramini": [
+      -22.955,
+      -49.856
+    ],
+    "hbv": [
+      -22.953,
+      -49.857
+    ],
+    "helena b vendramini": [
+      -22.954,
+      -49.857
+    ],
+    "helena bras": [
+      -22.955,
+      -49.856
+    ],
+    "helena braz": [
+      -22.955,
+      -49.857
+    ],
+    "helena braz vendramini": [
+      -22.954,
+      -49.857
+    ],
+    "industrial": [
+      -22.957,
+      -49.879
+    ],
+    "itaipava": [
+      -22.987,
+      -49.882
+    ],
+    "itajubi": [
+      -22.961,
+      -49.873
+    ],
+    "itajuby": [
+      -22.961,
+      -49.873
+    ],
+    "itamaraty": [
+      -23.014,
+      -49.883
+    ],
+    "jardim america": [
+      -22.97,
+      -49.859
+    ],
+    "jardim anchieta": [
+      -22.958,
+      -49.86
+    ],
+    "jardim aurora": [
+      -22.976,
+      -49.881
+    ],
+    "jardim beatriz": [
+      -22.956,
+      -49.868
+    ],
+    "jardim bela vista": [
+      -22.97,
+      -49.88
+    ],
+    "jardim brilhante": [
+      -22.961,
+      -49.896
+    ],
+    "jardim california": [
+      -22.964,
+      -49.865
+    ],
+    "jardim carolina": [
+      -22.975,
+      -49.852
+    ],
+    "jardim colorado": [
+      -22.958,
+      -49.874
+    ],
+    "jardim columbia": [
+      -22.953,
+      -49.869
+    ],
+    "jardim cristal": [
+      -22.963,
+      -49.893
+    ],
+    "jardim das paineiras": [
+      -22.965,
+      -49.894
+    ],
+    "jardim do sol": [
+      -22.958,
+      -49.877
+    ],
+    "jardim do sol ii": [
+      -22.957,
+      -49.878
+    ],
+    "jardim dos bandeirantes": [
+      -22.987,
+      -49.886
+    ],
+    "jardim eldorado": [
+      -22.965,
+      -49.855
+    ],
+    "jardim esmeralda": [
+      -22.961,
+      -49.894
+    ],
+    "jardim esplendor": [
+      -22.989,
+      -49.887
+    ],
+    "jardim estoril": [
+      -22.991,
+      -49.862
+    ],
+    "jardim europa": [
+      -22.966,
+      -49.86
+    ],
+    "jardim flamboyant": [
+      -22.964,
+      -49.863
+    ],
+    "jardim florida": [
+      -22.967,
+      -49.872
+    ],
+    "jardim guapore": [
+      -22.945,
+      -49.885
+    ],
+    "jardim ideal": [
+      -22.961,
+      -49.877
+    ],
+    "jardim imperial": [
+      -22.997,
+      -49.872
+    ],
+    "jardim independencia": [
+      -22.99,
+      -49.856
+    ],
+    "jardim industrial": [
+      -22.956,
+      -49.88
+    ],
+    "jardim itajubi": [
+      -22.961,
+      -49.873
+    ],
+    "jardim itamaraty": [
+      -23.014,
+      -49.883
+    ],
+    "jardim josefina": [
+      -22.954,
+      -49.871
+    ],
+    "jardim manhatan": [
+      -22.963,
+      -49.878
+    ],
+    "jardim matilde": [
+      -22.992,
+      -49.869
+    ],
+    "jardim nazareth": [
+      -22.997,
+      -49.857
+    ],
+    "jardim nossa senhora aparecida": [
+      -23.01,
+      -49.89
+    ],
+    "jardim oriental": [
+      -22.998,
+      -49.873
+    ],
+    "jardim ouro fino": [
+      -22.972,
+      -49.855
+    ],
+    "jardim ouro verde": [
+      -22.985,
+      -49.876
+    ],
+    "jardim paineiras": [
+      -22.966,
+      -49.894
+    ],
+    "jardim paris": [
+      -23.01,
+      -49.882
+    ],
+    "jardim paulista": [
+      -22.981,
+      -49.88
+    ],
+    "jardim primavera": [
+      -22.981,
+      -49.866
+    ],
+    "jardim quebec": [
+      -22.987,
+      -49.893
+    ],
+    "jardim santa fe": [
+      -22.966,
+      -49.887
+    ],
+    "jardim santa felicidade": [
+      -22.99,
+      -49.888
+    ],
+    "jardim santos dumont": [
+      -22.97,
+      -49.904
+    ],
+    "jardim santos dumont ii": [
+      -22.969,
+      -49.904
+    ],
+    "jardim sao carlos": [
+      -22.98,
+      -49.848
+    ],
+    "jardim sao domingos": [
+      -22.97,
+      -49.854
+    ],
+    "jardim sao francisco": [
+      -22.974,
+      -49.855
+    ],
+    "jardim sao jorge": [
+      -22.978,
+      -49.85
+    ],
+    "jardim sao judas": [
+      -22.968,
+      -49.896
+    ],
+    "jardim sao judas tadeu": [
+      -22.968,
+      -49.896
+    ],
+    "jardim sao silvestre": [
+      -22.995,
+      -49.862
+    ],
+    "jardim so silvestre": [
+      -22.994,
+      -49.863
+    ],
+    "jardim tropical": [
+      -22.98,
+      -49.884
+    ],
+    "jardim vale do sol": [
+      -22.965,
+      -49.877
+    ],
+    "jardim vale verde": [
+      -22.978,
+      -49.851
+    ],
+    "jardim veredas": [
+      -22.96,
+      -49.854
+    ],
+    "jardim vista alegre": [
+      -22.97,
+      -49.876
+    ],
+    "jd acacias": [
+      -22.976,
+      -49.855
+    ],
+    "jd alvorada": [
+      -22.971,
+      -49.87
+    ],
+    "jd america": [
+      -22.97,
+      -49.859
+    ],
+    "jd anchieta": [
+      -22.958,
+      -49.86
+    ],
+    "jd aurora": [
+      -22.976,
+      -49.881
+    ],
+    "jd bandeirantes": [
+      -22.987,
+      -49.885
+    ],
+    "jd beatriz": [
+      -22.956,
+      -49.867
+    ],
+    "jd bela vista": [
+      -22.97,
+      -49.879
+    ],
+    "jd brilhante": [
+      -22.961,
+      -49.896
+    ],
+    "jd california": [
+      -22.963,
+      -49.865
+    ],
+    "jd carolina": [
+      -22.974,
+      -49.852
+    ],
+    "jd christoni": [
+      -22.972,
+      -49.874
+    ],
+    "jd colorado": [
+      -22.958,
+      -49.874
+    ],
+    "jd columbia": [
+      -22.953,
+      -49.87
+    ],
+    "jd cristal": [
+      -22.963,
+      -49.893
+    ],
+    "jd das acacias": [
+      -22.963,
+      -49.855
+    ],
+    "jd das paineiras": [
+      -22.965,
+      -49.895
+    ],
+    "jd do sol": [
+      -22.958,
+      -49.878
+    ],
+    "jd do sol ii": [
+      -22.957,
+      -49.878
+    ],
+    "jd eldorado": [
+      -22.965,
+      -49.855
+    ],
+    "jd esmeralda": [
+      -22.96,
+      -49.894
+    ],
+    "jd esplendor": [
+      -22.989,
+      -49.886
+    ],
+    "jd estoril": [
+      -22.991,
+      -49.861
+    ],
+    "jd europa": [
+      -22.966,
+      -49.86
+    ],
+    "jd flamboyant": [
+      -22.963,
+      -49.862
+    ],
+    "jd florida": [
+      -22.967,
+      -49.872
+    ],
+    "jd furlan": [
+      -22.992,
+      -49.859
+    ],
+    "jd gabriela": [
+      -22.981,
+      -49.859
+    ],
+    "jd guapore": [
+      -22.945,
+      -49.885
+    ],
+    "jd ideal": [
+      -22.962,
+      -49.877
+    ],
+    "jd imperial": [
+      -22.997,
+      -49.872
+    ],
+    "jd independencia": [
+      -22.99,
+      -49.856
+    ],
+    "jd industrial": [
+      -22.956,
+      -49.88
+    ],
+    "jd itajubi": [
+      -22.961,
+      -49.873
+    ],
+    "jd itamaraty": [
+      -23.014,
+      -49.882
+    ],
+    "jd josefina": [
+      -22.954,
+      -49.871
+    ],
+    "jd julia": [
+      -22.967,
+      -49.855
+    ],
+    "jd manhatan": [
+      -22.963,
+      -49.878
+    ],
+    "jd matilde": [
+      -22.992,
+      -49.869
+    ],
+    "jd n s aparecida": [
+      -23.01,
+      -49.89
+    ],
+    "jd n s de fatima": [
+      -23.007,
+      -49.88
+    ],
+    "jd nazareth": [
+      -22.997,
+      -49.859
+    ],
+    "jd nossa senhora aparecida": [
+      -23.011,
+      -49.89
+    ],
+    "jd nossa sra de fatima": [
+      -23.008,
+      -49.881
+    ],
+    "jd novo horizonte": [
+      -22.983,
+      -49.851
+    ],
+    "jd oriental": [
+      -22.998,
+      -49.873
+    ],
+    "jd ouro fino": [
+      -22.971,
+      -49.855
+    ],
+    "jd ouro verde": [
+      -22.985,
+      -49.876
+    ],
+    "jd paineiras": [
+      -22.965,
+      -49.894
+    ],
+    "jd paris": [
+      -23.01,
+      -49.881
+    ],
+    "jd paulista": [
+      -22.98,
+      -49.881
+    ],
+    "jd primavera": [
+      -22.989,
+      -49.876
+    ],
+    "jd quebec": [
+      -22.987,
+      -49.892
+    ],
+    "jd santa f": [
+      -22.964,
+      -49.89
+    ],
+    "jd santa fe": [
+      -22.966,
+      -49.887
+    ],
+    "jd santa fe iv": [
+      -22.969,
+      -49.889
+    ],
+    "jd santa felicidade": [
+      -22.99,
+      -49.888
+    ],
+    "jd santos dumont": [
+      -22.969,
+      -49.904
+    ],
+    "jd sao carlos": [
+      -22.98,
+      -49.848
+    ],
+    "jd sao domingos": [
+      -22.97,
+      -49.854
+    ],
+    "jd sao francisco": [
+      -22.986,
+      -49.867
+    ],
+    "jd sao jorge": [
+      -22.977,
+      -49.85
+    ],
+    "jd sao judas": [
+      -22.968,
+      -49.896
+    ],
+    "jd sao judas tadeu": [
+      -22.968,
+      -49.896
+    ],
+    "jd sao silvestre": [
+      -22.994,
+      -49.862
+    ],
+    "jd tropical": [
+      -22.98,
+      -49.885
+    ],
+    "jd vale do sol": [
+      -22.964,
+      -49.878
+    ],
+    "jd vale verde": [
+      -22.979,
+      -49.851
+    ],
+    "jd veredas": [
+      -22.96,
+      -49.854
+    ],
+    "jd veredas ii": [
+      -22.96,
+      -49.854
+    ],
+    "jd vista alegre": [
+      -22.969,
+      -49.876
+    ],
+    "josefina": [
+      -22.954,
+      -49.871
+    ],
+    "kenedy": [
+      -22.969,
+      -49.861
+    ],
+    "lot maria christoni": [
+      -22.968,
+      -49.877
+    ],
+    "loteamento aguas do eloy": [
+      -22.98,
+      -49.907
+    ],
+    "loteamento domingos garcia": [
+      -22.997,
+      -49.88
+    ],
+    "loteamento jardim das acacias": [
+      -22.96,
+      -49.851
+    ],
+    "loteamento jardim esmeralda": [
+      -22.961,
+      -49.894
+    ],
+    "loteamento jardim veredas ii": [
+      -22.96,
+      -49.854
+    ],
+    "loteamento maria christoni": [
+      -22.968,
+      -49.876
+    ],
+    "loteamento mitsui": [
+      -22.966,
+      -49.886
+    ],
+    "loteamento recanto dos passaros iii": [
+      -22.958,
+      -49.852
+    ],
+    "loteamento residencial recanto dos passaros": [
+      -22.958,
+      -49.853
+    ],
+    "loteamento sao bento": [
+      -22.971,
+      -49.856
+    ],
+    "manhatan": [
+      -22.963,
+      -49.878
+    ],
+    "marcante": [
+      -22.963,
+      -49.871
+    ],
+    "margarida": [
+      -22.973,
+      -49.878
+    ],
+    "maria christoni": [
+      -22.967,
+      -49.876
+    ],
+    "matilde": [
+      -22.993,
+      -49.869
+    ],
+    "minas gerais": [
+      -22.985,
+      -49.855
+    ],
+    "musa": [
+      -23.004,
+      -49.884
+    ],
+    "n s fatima": [
+      -23.009,
+      -49.881
+    ],
+    "nao_informado": [
+      -22.971,
+      -49.87
+    ],
+    "nossa senhora aparecida": [
+      -23.01,
+      -49.89
+    ],
+    "nossa senhora de fatima": [
+      -23.007,
+      -49.881
+    ],
+    "nova christoni": [
+      -22.972,
+      -49.873
+    ],
+    "nova cristoni": [
+      -22.972,
+      -49.872
+    ],
+    "nova ourinhos": [
+      -22.972,
+      -49.884
+    ],
+    "nova sa": [
+      -22.969,
+      -49.87
+    ],
+    "nucleo habitacional asise chequer nicolau": [
+      -22.959,
+      -49.864
+    ],
+    "nucleo habitacional choso misato": [
+      -23.016,
+      -49.887
+    ],
+    "odilon": [
+      -22.996,
+      -49.881
+    ],
+    "operaria": [
+      -22.983,
+      -49.85
+    ],
+    "oriental": [
+      -22.997,
+      -49.873
+    ],
+    "orlando glagliato": [
+      -22.96,
+      -49.849
+    ],
+    "orlando quagliato": [
+      -22.961,
+      -49.85
+    ],
+    "osvaldo brizola": [
+      -22.958,
+      -49.859
+    ],
+    "oswaldo brizola": [
+      -22.957,
+      -49.853
+    ],
+    "ourinhos": [
+      -22.985,
+      -49.876
+    ],
+    "ourinhos - sp": [
+      -23.01,
+      -49.883
+    ],
+    "ourinhos caiua": [
+      -22.958,
+      -49.864
+    ],
+    "ourinhos constante": [
+      -22.959,
+      -49.862
+    ],
+    "ourinhos constante i": [
+      -22.976,
+      -49.872
+    ],
+    "ourinhos h": [
+      -22.981,
+      -49.846
+    ],
+    "ouro fino": [
+      -22.972,
+      -49.855
+    ],
+    "ouro verde": [
+      -22.986,
+      -49.876
+    ],
+    "pacaembu": [
+      -22.96,
+      -49.878
+    ],
+    "pacheco chaves": [
+      -23.011,
+      -49.894
+    ],
+    "padre e murante": [
+      -22.995,
+      -49.885
+    ],
+    "padre eduardo murante": [
+      -22.996,
+      -49.886
+    ],
+    "paineiras": [
+      -22.965,
+      -49.894
+    ],
+    "paris": [
+      -23.011,
+      -49.882
+    ],
+    "parque das flores": [
+      -23.001,
+      -49.871
+    ],
+    "parque gabriela": [
+      -22.981,
+      -49.86
+    ],
+    "parque minas gerais": [
+      -22.984,
+      -49.855
+    ],
+    "parque pacheco chaves": [
+      -23.012,
+      -49.895
+    ],
+    "parque valeriano marcante": [
+      -22.961,
+      -49.87
+    ],
+    "paulista": [
+      -22.981,
+      -49.883
+    ],
+    "perino": [
+      -22.973,
+      -49.864
+    ],
+    "pmg": [
+      -22.984,
+      -49.855
+    ],
+    "pq das flores": [
+      -23.002,
+      -49.872
+    ],
+    "pq gabriela": [
+      -22.968,
+      -49.858
+    ],
+    "pq minas gerais": [
+      -22.984,
+      -49.854
+    ],
+    "quagliato": [
+      -22.961,
+      -49.85
+    ],
+    "quebec": [
+      -22.987,
+      -49.893
+    ],
+    "rec dos passaros": [
+      -22.959,
+      -49.852
+    ],
+    "rec passaros 3": [
+      -22.955,
+      -49.854
+    ],
+    "recanto": [
+      -22.957,
+      -49.851
+    ],
+    "recanto dos passaros": [
+      -22.958,
+      -49.853
+    ],
+    "recanto dos passaros iii": [
+      -22.956,
+      -49.851
+    ],
+    "recanto iii": [
+      -22.955,
+      -49.852
+    ],
+    "recanto passaros": [
+      -22.958,
+      -49.852
+    ],
+    "recreio": [
+      -22.966,
+      -49.869
+    ],
+    "regina brizola": [
+      -22.955,
+      -49.855
+    ],
+    "residencial oswaldo brizola": [
+      -22.957,
+      -49.858
+    ],
+    "residencial parque gabriela": [
+      -22.981,
+      -49.86
+    ],
+    "residencial vandelena moraes freire": [
+      -22.956,
+      -49.85
+    ],
+    "residencial ville de france": [
+      -22.998,
+      -49.851
+    ],
+    "royal park": [
+      -22.972,
+      -49.892
+    ],
+    "rural": [
+      -22.99,
+      -49.871
+    ],
+    "sandano": [
+      -22.975,
+      -49.859
+    ],
+    "santa fe": [
+      -22.965,
+      -49.886
+    ],
+    "santa fe iv": [
+      -22.969,
+      -49.896
+    ],
+    "santa felicidade": [
+      -22.99,
+      -49.888
+    ],
+    "santa maria": [
+      -23.002,
+      -49.883
+    ],
+    "santos dumont": [
+      -22.97,
+      -49.904
+    ],
+    "sao carlos": [
+      -22.979,
+      -49.848
+    ],
+    "sao domingos": [
+      -22.97,
+      -49.854
+    ],
+    "sao francisco": [
+      -22.999,
+      -49.881
+    ],
+    "sao joao": [
+      -23.003,
+      -49.879
+    ],
+    "sao jorge": [
+      -22.978,
+      -49.851
+    ],
+    "sao jose": [
+      -22.991,
+      -49.88
+    ],
+    "sao judas": [
+      -22.969,
+      -49.895
+    ],
+    "sao judas tadeu": [
+      -22.968,
+      -49.895
+    ],
+    "sao luiz": [
+      -22.962,
+      -49.88
+    ],
+    "sao silvestre": [
+      -22.994,
+      -49.861
+    ],
+    "tropical": [
+      -22.98,
+      -49.883
+    ],
+    "usina sao luiz": [
+      -22.971,
+      -49.867
+    ],
+    "v n senhora de fatima": [
+      -23.007,
+      -49.881
+    ],
+    "vale do sol": [
+      -22.964,
+      -49.878
+    ],
+    "vale verde": [
+      -22.978,
+      -49.852
+    ],
+    "valeriano marcante": [
+      -22.962,
+      -49.871
+    ],
+    "vandelena": [
+      -22.958,
+      -49.856
+    ],
+    "vandelena m freire": [
+      -22.956,
+      -49.848
+    ],
+    "vandelena moraes": [
+      -22.956,
+      -49.848
+    ],
+    "vandelena moraes freire": [
+      -22.957,
+      -49.85
+    ],
+    "vendramini": [
+      -22.954,
+      -49.856
+    ],
+    "veredas": [
+      -22.96,
+      -49.854
+    ],
+    "veredas 2": [
+      -22.961,
+      -49.854
+    ],
+    "veredas i": [
+      -22.96,
+      -49.854
+    ],
+    "vila adalgisa": [
+      -22.974,
+      -49.853
+    ],
+    "vila adelia": [
+      -23.003,
+      -49.885
+    ],
+    "vila boa esperanca": [
+      -22.979,
+      -49.856
+    ],
+    "vila brasil": [
+      -22.958,
+      -49.868
+    ],
+    "vila california": [
+      -22.963,
+      -49.865
+    ],
+    "vila christone": [
+      -22.971,
+      -49.875
+    ],
+    "vila christoni": [
+      -22.972,
+      -49.873
+    ],
+    "vila emilia": [
+      -22.986,
+      -49.867
+    ],
+    "vila inglesa": [
+      -22.969,
+      -49.895
+    ],
+    "vila kenedy": [
+      -22.968,
+      -49.86
+    ],
+    "vila kennedy": [
+      -22.968,
+      -49.86
+    ],
+    "vila mano": [
+      -22.976,
+      -49.863
+    ],
+    "vila marcante": [
+      -22.962,
+      -49.87
+    ],
+    "vila margarida": [
+      -22.973,
+      -49.878
+    ],
+    "vila matilde": [
+      -22.987,
+      -49.868
+    ],
+    "vila moraes": [
+      -22.984,
+      -49.863
+    ],
+    "vila musa": [
+      -23.004,
+      -49.884
+    ],
+    "vila nossa senhora de fatima": [
+      -23.008,
+      -49.882
+    ],
+    "vila nova christoni": [
+      -22.972,
+      -49.873
+    ],
+    "vila nova ourinhos": [
+      -22.973,
+      -49.882
+    ],
+    "vila nova s": [
+      -22.968,
+      -49.87
+    ],
+    "vila nova sa": [
+      -22.968,
+      -49.87
+    ],
+    "vila odilon": [
+      -22.996,
+      -49.88
+    ],
+    "vila operaria": [
+      -22.982,
+      -49.85
+    ],
+    "vila perino": [
+      -22.971,
+      -49.865
+    ],
+    "vila recreio": [
+      -22.966,
+      -49.868
+    ],
+    "vila sa": [
+      -22.976,
+      -49.875
+    ],
+    "vila sandano": [
+      -22.975,
+      -49.858
+    ],
+    "vila santa maria": [
+      -23.002,
+      -49.883
+    ],
+    "vila santo antonio": [
+      -22.983,
+      -49.867
+    ],
+    "vila santos dumont": [
+      -22.971,
+      -49.905
+    ],
+    "vila sao francisco": [
+      -22.999,
+      -49.88
+    ],
+    "vila sao joao": [
+      -23.004,
+      -49.88
+    ],
+    "vila sao jose": [
+      -22.991,
+      -49.88
+    ],
+    "vila sao luiz": [
+      -22.961,
+      -49.88
+    ],
+    "vila sao silvestre": [
+      -22.994,
+      -49.862
+    ],
+    "vila so luiz": [
+      -22.961,
+      -49.881
+    ],
+    "vila soares": [
+      -22.982,
+      -49.889
+    ],
+    "vila vilar": [
+      -22.997,
+      -49.864
+    ],
+    "village san rafael": [
+      -22.991,
+      -49.883
+    ],
+    "ville de france": [
+      -22.982,
+      -49.851
+    ],
+    "vista alegre": [
+      -22.97,
+      -49.876
+    ],
+    "vl christoni": [
+      -22.972,
+      -49.873
+    ],
+    "vl de france": [
+      -22.962,
+      -49.851
+    ],
+    "vl mano": [
+      -22.978,
+      -49.863
+    ],
+    "vl margarida": [
+      -22.973,
+      -49.878
+    ],
+    "vl musa": [
+      -23.002,
+      -49.884
+    ],
+    "vl n s de fatima": [
+      -23.007,
+      -49.881
+    ],
+    "vl odilon": [
+      -22.995,
+      -49.879
+    ],
+    "vl operaria": [
+      -22.982,
+      -49.85
+    ],
+    "vl perino": [
+      -22.969,
+      -49.867
+    ],
+    "vl sandano": [
+      -22.975,
+      -49.858
+    ],
+    "vl sao francisco": [
+      -23,
+      -49.881
+    ],
+    "vl sao jose": [
+      -22.991,
+      -49.88
+    ],
+    "vl sao luiz": [
+      -22.961,
+      -49.881
+    ],
+    "vl soares": [
+      -22.982,
+      -49.889
+    ],
+    "vila adalgiza": [
+      -22.974,
+      -49.853
+    ],
+    "jardim manhattan": [
+      -22.963,
+      -49.878
+    ],
+    "jardim gabriela": [
+      -22.981,
+      -49.859
+    ],
+    "loteamento ourinhos constante": [
+      -22.959,
+      -49.862
+    ],
+    "conjunto orlando quagliato": [
+      -22.961,
+      -49.85
+    ],
+    "jardim veredas ii": [
+      -22.96,
+      -49.854
+    ],
+    "conjunto residencial helena braz vendramini": [
+      -22.955,
+      -49.856
+    ]
+  }
+}
