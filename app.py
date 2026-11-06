@@ -2,6 +2,7 @@ import hashlib
 import hmac
 import io
 import json
+from pathlib import Path
 import unicodedata
 import time
 
@@ -64,10 +65,10 @@ if source:
 else:
     st.info("Demonstração com dados fictícios.")
     data = pd.DataFrame([
-        ("Área A", "Feminino", "Categoria A", "Serviço A", "1990-01-01", "2025-07-15"),
-        ("Área A", "Masculino", "Categoria B", "Serviço B", None, "2025-07-16"),
-        ("Área B", "Feminino", None, "Serviço A", "2001-01-01", None),
-        (None, None, "Categoria A", None, "1980-01-01", None),
+        ("Centro", "Feminino", "Categoria A", "Serviço A", "1990-01-01", "2025-07-15"),
+        ("Centro", "Masculino", "Categoria B", "Serviço B", None, "2025-07-16"),
+        ("Vila Brasil", "Feminino", None, "Serviço A", "2001-01-01", None),
+        ("Jardim Paulista", None, "Categoria A", None, "1980-01-01", None),
     ], columns=columns)
 
 bairro = data["Bairro"].astype("string").str.strip().replace("", pd.NA).fillna("Não informado")
@@ -127,29 +128,35 @@ c.metric("Cadastros sem bairro", sem_bairro)
 territorio, perfil, qualidade = st.tabs(["🗺️ Território", "📊 Perfil", "📋 Qualidade"])
 with territorio:
     st.subheader("Distribuição territorial · Ourinhos")
-    referencias = {"area a": (-22.976, -49.878), "area b": (-22.988, -49.860)} if not source else {}
+    arquivo = Path(__file__).with_name("bairros_ourinhos.json")
+    referencias = json.loads(arquivo.read_text(encoding="utf-8"))["bairros"]
     if source:
         referencia = st.file_uploader("Referência territorial CSV", type=["csv"],
                                      help="Colunas: Bairro, latitude, longitude. Use somente coordenadas agregadas e validadas.")
         if referencia:
             try:
+                extras = {}
                 tabela = pd.read_csv(referencia, sep=None, engine="python")
                 for nome, lat, lon in tabela[["Bairro", "latitude", "longitude"]].itertuples(index=False, name=None):
                     lat, lon = float(lat), float(lon)
                     if pd.notna(nome) and -23.25 <= lat <= -22.70 and -50.15 <= lon <= -49.55:
-                        referencias[chave_bairro(nome)] = (lat, lon)
+                        extras[chave_bairro(nome)] = (lat, lon)
+                referencias.update(extras)
             except (KeyError, ValueError, pd.errors.ParserError):
-                referencias.clear()
                 st.error("Use um CSV com Bairro, latitude e longitude em graus decimais.")
     else:
-        st.caption("Pontos ilustrativos de áreas fictícias para demonstrar o mapa.")
+        st.caption("Bairros reais de Ourinhos. As contagens da demonstração são fictícias.")
     total_por_bairro = bairro[bairro.ne("Não informado")].value_counts()
     maior_contagem = int(total_por_bairro.iloc[0]) if not total_por_bairro.empty else 1
     mapeados = mapa_bairros(
         bairros.drop(index="Não informado", errors="ignore"), referencias, maior_contagem
     )
-    st.caption("OpenStreetMap · a área de cada círculo é proporcional ao número de cadastros do bairro.")
+    st.caption("OpenStreetMap · posições aproximadas por bairro, derivadas do Projeto Dengue. A área de cada círculo é proporcional ao número de cadastros.")
     st.caption(f"{mapeados} cadastros representados por pontos agregados · {len(subset) - mapeados} sem ponto no mapa.")
+    sem_referencia = [str(nome) for nome in bairros.index if nome != "Não informado" and chave_bairro(nome) not in referencias]
+    if sem_referencia:
+        with st.expander("Bairros aguardando referência territorial"):
+            st.write(", ".join(sem_referencia))
     st.subheader("Bairros com mais cadastros")
     top = bairros.drop(index="Não informado", errors="ignore").head(10)
     if not top.empty:
