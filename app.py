@@ -2,6 +2,7 @@ import hashlib
 import hmac
 import io
 import json
+import re
 from pathlib import Path
 import unicodedata
 import time
@@ -56,8 +57,8 @@ columns = ["Bairro", "Gênero", "Deficiência", "Serviço", "Data de nascimento"
 if source:
     try:
         data = pd.read_excel(io.BytesIO(source.getvalue()), sheet_name="Dados",
-                             usecols=lambda field: field in columns or field == "Número")
-        data = data.loc[data["Número"].notna(), columns]
+                             usecols=lambda field: field in columns or field in {"Número", "Endereço"})
+        data = data.loc[data["Número"].notna()].drop(columns="Número")
     except (ValueError, KeyError, OSError):
         st.error("Confira a aba Dados e os cabeçalhos da planilha.")
         st.stop()
@@ -78,9 +79,43 @@ def chave_bairro(nome):
     )
 
 
+# Public postal street-to-neighborhood references for Ourinhos.
+BAIRRO_POR_RUA = {
+    "jarbas alves de campos": "Vila Boa Esperança",
+    "antonio henrique rolli": "Jardim Europa",
+    "adao queiroz": "Jardim Eldorado",
+    "adao queiros": "Jardim Eldorado",
+    "stelio machado loureiro": "Vila Mano",
+    "edvaldo ferreira da silva": "Núcleo Habitacional Choso Misato",
+    "jornalista francisco de almeida": "Parque Minas Gerais",
+    "andre gasparoto": "Jardim Beatriz",
+    "angelo sedassi": "Vila Boa Esperança",
+    "angelo sedassari": "Vila Boa Esperança",
+    "marcelo borges moreira": "Residencial Ville de France",
+    "padre bruno welter": "Conjunto Habitacional Helena Braz Vendramini"
+}
+
+def bairro_pelo_endereco(endereco):
+    if pd.isna(endereco):
+        return None
+    rua = chave_bairro(re.split(r"[,;]|\s+\d", str(endereco), maxsplit=1)[0])
+    rua = re.sub(r"^(?:rua|r\.?)\s+", "", rua)
+    return BAIRRO_POR_RUA.get(" ".join(rua.split()))
+
+
 arquivo = Path(__file__).with_name("bairros_ourinhos.json")
 catalogo = json.loads(arquivo.read_text(encoding="utf-8"))
 nomes_canonicos = catalogo.get("nomes_canonicos", {})
+inferidos = 0
+if "Endereço" in data:
+    faltantes = data["Bairro"].astype("string").str.strip().fillna("").eq("")
+    sugestoes = data.loc[faltantes, "Endereço"].map(bairro_pelo_endereco).dropna()
+    data.loc[sugestoes.index, "Bairro"] = sugestoes
+    inferidos = len(sugestoes)
+    data = data.drop(columns="Endereço")
+if inferidos:
+    st.caption(f"{inferidos} cadastros sem bairro foram classificados pelo logradouro.")
+
 data["Bairro"] = data["Bairro"].map(
     lambda nome: nomes_canonicos.get(chave_bairro(nome), nome) if pd.notna(nome) else nome
 )
