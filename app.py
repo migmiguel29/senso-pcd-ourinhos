@@ -3,7 +3,6 @@ import hmac
 import io
 import json
 import unicodedata
-from urllib.parse import quote
 import time
 
 import pandas as pd
@@ -85,14 +84,13 @@ def chave_bairro(nome):
     )
 
 
-def mapa_bairros(totais, referencias, chave):
+def mapa_bairros(totais, referencias, maior_contagem):
     pontos = []
     for nome, total in totais.items():
         coordenadas = referencias.get(chave_bairro(nome))
         if coordenadas is not None:
             pontos.append([*coordenadas, str(nome), int(total)])
     dados_js = json.dumps(pontos, ensure_ascii=True).replace("<", r"\u003c")
-    chave_js = json.dumps(quote(chave, safe=""))
     components.html(f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -101,24 +99,15 @@ def mapa_bairros(totais, referencias, chave):
 </head><body><div id="map" aria-label="Mapa de pontos agregados por bairro"></div>
 <script>
 const map = L.map('map').setView([-22.979,-49.871],13);
-const key = {chave_js};
-const osm = () => L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png',
+L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png',
   {{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}}).addTo(map);
-if (key) {{
-  const layer = L.tileLayer('https://api.tomtom.com/map/1/tile/basic/main/{{z}}/{{x}}/{{y}}.png?key='+key,
-    {{attribution:'&copy; <a href="https://www.tomtom.com/">TomTom</a>'}}).addTo(map);
-  layer.once('tileerror', () => {{map.removeLayer(layer); osm();}});
-}} else {{ osm(); }}
-const markers = [];
 for (const [lat, lon, nome, total] of {dados_js}) {{
-  const circle = L.circleMarker([lat,lon],{{radius:Math.min(22,6+Math.sqrt(total)*2),
+  const circle = L.circleMarker([lat,lon],{{radius:30*Math.sqrt(total/{maior_contagem}),
     color:'#0e7490',weight:2,fillColor:'#2dd4bf',fillOpacity:.8}}).addTo(map);
   const tip = document.createElement('span');
   tip.textContent = nome + ' · ' + total + ' cadastro(s)';
   circle.bindTooltip(tip);
-  markers.push(circle);
 }}
-if (markers.length) map.fitBounds(L.featureGroup(markers).getBounds().pad(.25),{{maxZoom:14}});
 </script></body></html>""", height=425)
     return sum(ponto[3] for ponto in pontos)
 
@@ -154,10 +143,12 @@ with territorio:
                 st.error("Use um CSV com Bairro, latitude e longitude em graus decimais.")
     else:
         st.caption("Pontos ilustrativos de áreas fictícias para demonstrar o mapa.")
-    chave = str(st.secrets.get("tomtom_api_key", "")).strip()
-    if not chave:
-        st.caption("Mapa-base OpenStreetMap. A camada TomTom é ativada pela configuração tomtom_api_key.")
-    mapeados = mapa_bairros(bairros.drop(index="Não informado", errors="ignore"), referencias, chave)
+    total_por_bairro = bairro[bairro.ne("Não informado")].value_counts()
+    maior_contagem = int(total_por_bairro.iloc[0]) if not total_por_bairro.empty else 1
+    mapeados = mapa_bairros(
+        bairros.drop(index="Não informado", errors="ignore"), referencias, maior_contagem
+    )
+    st.caption("OpenStreetMap · a área de cada círculo é proporcional ao número de cadastros do bairro.")
     st.caption(f"{mapeados} cadastros representados por pontos agregados · {len(subset) - mapeados} sem ponto no mapa.")
     st.subheader("Bairros com mais cadastros")
     top = bairros.drop(index="Não informado", errors="ignore").head(10)
