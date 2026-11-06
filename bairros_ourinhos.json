@@ -43,7 +43,7 @@
     ],
     "brizola": [
       -22.957,
-      -49.852
+      -49.853
     ],
     "caiua": [
       -22.958,
@@ -54,7 +54,7 @@
       -49.865
     ],
     "cdhu vila brasil": [
-      -22.957,
+      -22.959,
       -49.864
     ],
     "cdhu vl brasil": [
@@ -114,8 +114,8 @@
       -49.85
     ],
     "cj osvaldo brizola": [
-      -22.955,
-      -49.859
+      -22.957,
+      -49.853
     ],
     "cj vendramini": [
       -22.953,
@@ -138,7 +138,7 @@
       -49.85
     ],
     "conj hab osvaldo brizola": [
-      -22.958,
+      -22.957,
       -49.853
     ],
     "conj padre e murante": [
@@ -950,8 +950,8 @@
       -49.85
     ],
     "osvaldo brizola": [
-      -22.958,
-      -49.859
+      -22.957,
+      -49.853
     ],
     "oswaldo brizola": [
       -22.957,
@@ -1103,7 +1103,7 @@
     ],
     "residencial oswaldo brizola": [
       -22.957,
-      -49.858
+      -49.853
     ],
     "residencial parque gabriela": [
       -22.981,
@@ -1496,6 +1496,65 @@
     "conjunto residencial helena braz vendramini": [
       -22.955,
       -49.856
+    ],
+    "cdhu": [
+      -22.959,
+      -49.864
+    ],
+    "cdhu -vila brasil": [
+      -22.959,
+      -49.864
+    ],
+    "itajobi": [
+      -22.961,
+      -49.873
+    ],
+    "residencial r brisola": [
+      -22.957,
+      -49.853
+    ],
+    "residencial r brizola": [
+      -22.957,
+      -49.853
+    ],
+    "residencial osvaldo brizola": [
+      -22.957,
+      -49.853
     ]
+  },
+  "nomes_canonicos": {
+    "cdhu": "CDHU Vila Brasil",
+    "cdhu vila brasil": "CDHU Vila Brasil",
+    "cdhu vl brasil": "CDHU Vila Brasil",
+    "cdhu -vila brasil": "CDHU Vila Brasil",
+    "itajobi": "Conjunto Residencial Itajubi",
+    "itajubi": "Conjunto Residencial Itajubi",
+    "itajuby": "Conjunto Residencial Itajubi",
+    "jardim itajubi": "Conjunto Residencial Itajubi",
+    "jd itajubi": "Conjunto Residencial Itajubi",
+    "conjunto residencial itajubi": "Conjunto Residencial Itajubi",
+    "residencial r brisola": "Residencial Oswaldo Brizola",
+    "residencial r brizola": "Residencial Oswaldo Brizola",
+    "residencial osvaldo brizola": "Residencial Oswaldo Brizola",
+    "residencial oswaldo brizola": "Residencial Oswaldo Brizola",
+    "osvaldo brizola": "Residencial Oswaldo Brizola",
+    "oswaldo brizola": "Residencial Oswaldo Brizola",
+    "cj osvaldo brizola": "Residencial Oswaldo Brizola",
+    "conj hab osvaldo brizola": "Residencial Oswaldo Brizola",
+    "brizola": "Residencial Oswaldo Brizola"
+  },
+  "referencias_complementares": {
+    "CDHU Vila Brasil": {
+      "cep_referencia": "19915-070",
+      "fonte": "Prefeitura de Ourinhos (CDHU Vila Brasil); referência postal de logradouro e mediana dos pontos CDHU do Projeto Dengue."
+    },
+    "Conjunto Residencial Itajubi": {
+      "cep_referencia": "19911-425",
+      "fonte": "OpenStreetMap, nó 11555612394; CEP da Rua Antônio de Souza Vianna."
+    },
+    "Residencial Oswaldo Brizola": {
+      "cep_referencia": "19915-792",
+      "fonte": "Rua Gumercindo Francisco de Moraes; mediana arredondada dos pontos do CEP no Projeto Dengue."
+    }
   }
 }
