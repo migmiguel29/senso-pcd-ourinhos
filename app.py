@@ -71,18 +71,24 @@ else:
         ("Jardim Paulista", None, "Categoria A", None, "1980-01-01", None),
     ], columns=columns)
 
-bairro = data["Bairro"].astype("string").str.strip().replace("", pd.NA).fillna("Não informado")
-selected = st.sidebar.multiselect("Bairro", sorted(bairro.unique()))
-subset = data.loc[bairro.isin(selected)] if selected else data
-def contagens(coluna):
-    return subset[coluna].astype("string").str.strip().replace("", pd.NA).fillna("Não informado").value_counts()
-
-
 def chave_bairro(nome):
     return "".join(
         c for c in unicodedata.normalize("NFKD", str(nome).strip().casefold())
         if not unicodedata.combining(c)
     )
+
+
+arquivo = Path(__file__).with_name("bairros_ourinhos.json")
+catalogo = json.loads(arquivo.read_text(encoding="utf-8"))
+nomes_canonicos = catalogo.get("nomes_canonicos", {})
+data["Bairro"] = data["Bairro"].map(
+    lambda nome: nomes_canonicos.get(chave_bairro(nome), nome) if pd.notna(nome) else nome
+)
+bairro = data["Bairro"].astype("string").str.strip().replace("", pd.NA).fillna("Não informado")
+selected = st.sidebar.multiselect("Bairro", sorted(bairro.unique()))
+subset = data.loc[bairro.isin(selected)] if selected else data
+def contagens(coluna):
+    return subset[coluna].astype("string").str.strip().replace("", pd.NA).fillna("Não informado").value_counts()
 
 
 def mapa_bairros(totais, referencias, maior_contagem):
@@ -128,8 +134,7 @@ c.metric("Cadastros sem bairro", sem_bairro)
 territorio, perfil, qualidade = st.tabs(["🗺️ Território", "📊 Perfil", "📋 Qualidade"])
 with territorio:
     st.subheader("Distribuição territorial · Ourinhos")
-    arquivo = Path(__file__).with_name("bairros_ourinhos.json")
-    referencias = json.loads(arquivo.read_text(encoding="utf-8"))["bairros"]
+    referencias = catalogo["bairros"].copy()
     if source:
         referencia = st.file_uploader("Referência territorial CSV", type=["csv"],
                                      help="Colunas: Bairro, latitude, longitude. Use somente coordenadas agregadas e validadas.")
