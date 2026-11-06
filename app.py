@@ -1,3 +1,4 @@
+from html import escape
 import hashlib
 import hmac
 import io
@@ -126,6 +127,37 @@ def contagens(coluna):
     return subset[coluna].astype("string").str.strip().replace("", pd.NA).fillna("Não informado").value_counts()
 
 
+def grafico_fixo(contagem, cor, altura):
+    largura = 760
+    inicio = 320
+    maior = max(int(contagem.max()), 1)
+    passo = (altura - 16) / len(contagem)
+    linhas = []
+    for indice, (rotulo, total) in enumerate(contagem.items()):
+        total = int(total)
+        y = 8 + indice * passo
+        barra = total / maior * 385
+        nome = str(rotulo)
+        curto = nome if len(nome) <= 39 else nome[:38] + "…"
+        linhas.append(
+            f'<g><title>{escape(nome)}: {total}</title>'
+            f'<text x="8" y="{y + passo / 2}" dominant-baseline="middle">{escape(curto)}</text>'
+            f'<rect x="{inicio}" y="{y + passo * .18}" width="{barra}" '
+            f'height="{passo * .64}" rx="4" fill="{cor}"/>'
+            f'<text x="{inicio + barra + 8}" y="{y + passo / 2}" '
+            f'dominant-baseline="middle">{total}</text></g>'
+        )
+    components.html(
+        f'<div style="overflow-x:auto;background:#f8fafc;border-radius:12px">'
+        f'<svg width="100%" height="{altura}" style="min-width:620px" '
+        f'viewBox="0 0 {largura} {altura}" role="img" aria-label="Contagem por categoria" '
+        f'xmlns="http://www.w3.org/2000/svg" fill="#172554" font-family="system-ui" '
+        f'font-size="13">{"".join(linhas)}</svg></div>',
+        height=altura + 20,
+        scrolling=True,
+    )
+
+
 def mapa_bairros(totais, referencias, maior_contagem):
     pontos = []
     for nome, total in totais.items():
@@ -200,8 +232,7 @@ with territorio:
     st.subheader("Bairros com mais cadastros")
     top = bairros.drop(index="Não informado", errors="ignore").head(10)
     if not top.empty:
-        st.bar_chart(top.rename("Cadastros").rename_axis("Bairro").reset_index(),
-                     x="Bairro", y="Cadastros", horizontal=True, height=320, color="#0e7490")
+        grafico_fixo(top, "#0e7490", 320)
     with st.expander("Ver tabela completa de bairros"):
         st.dataframe(bairros.rename("Cadastros"), height=300)
 
@@ -210,8 +241,7 @@ with perfil:
         st.subheader(coluna)
         contagem = contagens(coluna)
         if not contagem.empty:
-            st.bar_chart(contagem.head(12).rename("Cadastros").rename_axis(coluna).reset_index(),
-                         x=coluna, y="Cadastros", horizontal=True, height=280, color=cor)
+            grafico_fixo(contagem.head(12), cor, 280)
         st.dataframe(contagem.rename("Cadastros"), height=240)
 
 with qualidade:
